@@ -46,7 +46,8 @@ public class DataParsing : MonoBehaviour
         NftModel.species =  data[37* (NftModel.id) + 9]; //Get Species
         NftModel.gene =  data[37* (NftModel.id) + 10];
         NftModel.mood =  data[37* (NftModel.id) + 11];
-
+        
+        Debug.Log("Database Read: NFT Properties ");
         FetchNFTTexturefromipfs();
     }
     
@@ -68,7 +69,7 @@ public class DataParsing : MonoBehaviour
         else {
             NftModel.image = ((DownloadHandlerTexture)www.downloadHandler).texture;
    
-            Debug.Log("NFTData Fetch Complete");
+            Debug.Log("NFT Image data fetch from IPFS | " + NftModel.imageurl);
             NFTDataFetchComplete();
         }
         

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NFTEnvironmentHandler : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class NFTEnvironmentHandler : MonoBehaviour
     [SerializeField] private GameObject Langoustine;
     [SerializeField] private GameObject Shrimp;
     [SerializeField] private GameObject Mudcrab;
-    
+
     
     public void updateNFTLooks()
     {
@@ -48,5 +49,5 @@ public class NFTEnvironmentHandler : MonoBehaviour
         {
             Mudcrab.SetActive(true);
         }
-    }
+    }                             
 }

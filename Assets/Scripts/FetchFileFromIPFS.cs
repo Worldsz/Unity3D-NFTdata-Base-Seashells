@@ -22,8 +22,7 @@ using UnityEngine.Events;
 public class FetchFileFromIPFS : MonoBehaviour
 {
     [SerializeField] private string _fileIPFSHash = "bafybeiczdp52pebdgxzcznmqumtvg2oxf3awcfzabzmmvnhhlfxez45xzu/Copy%20of%20LOBS%20Overall%20Ranking%20-%20Changed%20-%20full_collection.csv";
-
-
+    
     [SerializeField] private DataParsing _dataparsing;
     [SerializeField] private UnityEvent OnFetchDatabaseComplete;
 
@@ -32,7 +31,12 @@ public class FetchFileFromIPFS : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("WORLDSZ | SEASHELLS | 10b57e6 fa5h10N"); //10b57e6 fa5h10N
+        Debug.Log("IPFS DataBase Method> ");
+        
         ipfsURL = "https://cloudflare-ipfs.com/ipfs/" + _fileIPFSHash;
+        Debug.LogFormat(_fileIPFSHash);
+        
         StartCoroutine(FetchCSVIPFSFile());
     }
 
