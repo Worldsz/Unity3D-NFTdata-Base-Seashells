@@ -66,10 +66,15 @@ namespace NFTPort
                 }
             }
 
+            
             StartCoroutine(GetTexture(NFTPort_NFTModel.nft.file_url));
         }
         
-        IEnumerator GetTexture(string fullimageurl) {
+        IEnumerator GetTexture(string ipfsurl)
+        {
+
+            string fullimageurl = "https://cloudflare-ipfs.com/ipfs/" + ipfsurl.Replace("ipfs://", "");
+            Debug.Log(fullimageurl);
             UnityWebRequest www = UnityWebRequestTexture.GetTexture(fullimageurl);
             yield return www.SendWebRequest();
 
