@@ -47,6 +47,22 @@ public class DataParsing : MonoBehaviour
         NftModel.gene =  data[37* (NftModel.id) + 10];
         NftModel.mood =  data[37* (NftModel.id) + 11];
         
+        //rarities
+        NftModel._1 = data[37* (NftModel.id) + 17];
+        NftModel._2 = data[37* (NftModel.id) + 18];
+        NftModel._3 = data[37* (NftModel.id) + 19];
+        NftModel._4 = data[37* (NftModel.id) + 20];
+        NftModel._5 = data[37* (NftModel.id) + 21];
+        NftModel._6 = data[37* (NftModel.id) + 22];
+        NftModel._7 = data[37* (NftModel.id) + 23];
+        NftModel._8 = data[37* (NftModel.id) + 24];
+        NftModel._9 = data[37* (NftModel.id) + 25];
+        NftModel._10 = data[37* (NftModel.id) + 26];
+        NftModel._11 = data[37* (NftModel.id) + 27];
+        NftModel._12 = data[37* (NftModel.id) + 28];
+        
+        
+        
         Debug.Log("Database Read: NFT Properties ");
         FetchNFTTexturefromipfs();
     }
@@ -78,7 +94,7 @@ public class DataParsing : MonoBehaviour
     void NFTDataFetchComplete()
     {
         _nftEnvironmentHandler.updateNFTLooks();
-        _uiHandler.UpdateNFTPropertiesUI();
+        _uiHandler.UpdateAllui();
     }
     
     

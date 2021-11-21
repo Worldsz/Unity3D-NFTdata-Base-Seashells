@@ -16,4 +16,18 @@ public class NFTModel : MonoBehaviour
     public string gene = "none";
     public string mood = "none";
     
+    //rarities
+    public string _1;
+    public string _2;
+    public string _3;
+    public string _4;
+    public string _5;
+    public string _6;
+    public string _7;
+    public string _8;
+    public string _9;
+    public string _10;
+    public string _11;
+    public string _12;
+    
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -29,8 +30,16 @@ public class FetchFileFromIPFS : MonoBehaviour
     private string ipfsURL;
     string file_name;
 
-    void Awake()
+    public UnityEvent awake;
+
+    private void Awake()
     {
+        awake.Invoke();
+    }
+
+    void Start()
+    {
+        Debug.Log("WWW.EMBRACINGEARTH.SPACE"); 
         Debug.Log("WORLDSZ | SEASHELLS | 10b57e6 fa5h10N"); //10b57e6 fa5h10N
         Debug.Log("IPFS DataBase Method> ");
         

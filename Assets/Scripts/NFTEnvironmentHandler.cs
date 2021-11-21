@@ -12,7 +12,7 @@ public class NFTEnvironmentHandler : MonoBehaviour
     [SerializeField] private GameObject Langoustine;
     [SerializeField] private GameObject Shrimp;
     [SerializeField] private GameObject Mudcrab;
-
+    [Space(10)] [SerializeField] private Material BasefxMat;
     
     public void updateNFTLooks()
     {
@@ -20,6 +20,10 @@ public class NFTEnvironmentHandler : MonoBehaviour
         {
             m.mainTexture = NftModel.image;
         }
+        
+        BasefxMat.SetTexture("_DetailAlbedoMap", NftModel.image);
+        
+        
         ChooseSSpecies();
     }
 
